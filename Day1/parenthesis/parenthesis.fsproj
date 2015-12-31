@@ -45,6 +45,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="helper.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <PropertyGroup>
