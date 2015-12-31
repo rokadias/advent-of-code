@@ -1,6 +1,0 @@
-/Users/srokadia/OpenSource/advent-of-code/Day1/parenthesis/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.fs
-/Users/srokadia/OpenSource/advent-of-code/Day1/parenthesis/bin/Debug/FSharp.Core.dll
-/Users/srokadia/OpenSource/advent-of-code/Day1/parenthesis/bin/Debug/Parenthesis.exe.mdb
-/Users/srokadia/OpenSource/advent-of-code/Day1/parenthesis/bin/Debug/Parenthesis.exe
-/Users/srokadia/OpenSource/advent-of-code/Day1/parenthesis/obj/Debug/Parenthesis.exe
-/Users/srokadia/OpenSource/advent-of-code/Day1/parenthesis/obj/Debug/Parenthesis.exe.mdb
