@@ -1,4 +1,3 @@
-use std::collections::HashMap;
 use std::env;
 use std::fs;
 use std::path::Path;
@@ -11,7 +10,7 @@ fn main() {
 
     let lines = contents.split("\n");
     let mut left = Vec::new();
-    let mut right: HashMap<i32, i32> = HashMap::new();
+    let mut right = Vec::new();
     lines.enumerate().for_each(|(_i, line)| {
         let args = line.split(" ");
         args.enumerate().for_each(|(i, arg)| {
@@ -20,15 +19,24 @@ fn main() {
                 if i == 0 {
                     left.push(val);
                 } else {
-                    right.entry(val).and_modify(|counter| *counter += 1).or_insert(1);
+                    right.push(val);
                 }
             }
 
         });
     });
 
-    let similarities = left.iter().map(|val| { val * *right.get(&val).unwrap_or(&0) }).collect::<Vec<i32>>();
+    left.sort();
+    right.sort();
 
-    let total: i32 = similarities.iter().sum();
-    println!("Total Similarities: {}", total);
+    let mut deltas = Vec::new();
+
+    for (i, (l, r)) in left.iter().zip(right.iter()).enumerate() {
+        let delta = l - r;
+        let absolute_delta = delta.abs();
+        deltas.push(absolute_delta);
+    }
+
+    let total: i32 = deltas.iter().sum();
+    println!("Total: {}", total);
 }
